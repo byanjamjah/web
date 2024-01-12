@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Share Home</title>
+		<link rel="stylesheet" href="../static/CSS/styles.css" />
+		<link rel="stylesheet" href="../static/CSS/mobile.css" />
+	</head>
+	<body>
+		<main class="container">
+			<div class="box">
+				<div class="text-sec">
+					<div class="heading">
+						<div class="main-heading">
+							<h1>welcome<br> <span>{{user.first_name}}</span> </h1>
+						</div>
+						<div class="sub-heading">
+							<p>
+                                Email: {{ user.email }}<br>
+								Discover the benefits of data analytics and make better
+								decisions regarding revenue, customer experience, and overall
+								efficiency.
+							</p>
+						</div>
+					</div>
+					<div class="table">
+						<div class="element">
+							<div class="stats"><button onclick="location.href='{{ url_for('route.telegram', _external=True) }}';">Telegram</button></div>
+							<div class="stat-heading"><p>Telegram</p></div>
+						</div>
+						<div class="element">
+							<div class="stats"><button onclick="location.href='{{ url_for('route.whatsapp', _external=True) }}';">
+                                WhatsApp</button>
+                            </div>
+							<div class="stat-heading"><p> WhatsApp</p></div>
+						</div>
+						<div class="element">
+							<div class="stats"><button onclick="location.href='/logout';">Log out</button></div>
+							<div class="stat-heading"><p>log out</p></div>
+						</div>
+					</div>
+				</div>
+				<div class="img-sec">
+					<div class="main-img">
+						<img
+							src="../static/img/nathana-reboucas-c4aT8MfEzdw-unsplash.jpg"
+							alt="people sitting"
+						/>
+					</div>
+					<div class="hover-card"></div>
+				</div>
+			</div>
+		</main>
+	</body>
+</html>
